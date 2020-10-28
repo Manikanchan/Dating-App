@@ -14,11 +14,10 @@ export class NavComponent implements OnInit {
   constructor(public authService: AuthService, private alertify: AlertifyService, private router: Router) { }
 
 
-  // tslint:disable-next-line: typedef
+
   ngOnInit() {
   }
 
-  // tslint:disable-next-line: typedef
   login() {
     this.authService.login(this.model).subscribe(next => {
       this.alertify.success('Logged in Successfully');
@@ -30,12 +29,11 @@ export class NavComponent implements OnInit {
   }
 
 
-  // tslint:disable-next-line: typedef
+
   loggedIn() {
     return this.authService.loggedIn();
   }
 
-  // tslint:disable-next-line: typedef
   logout() {
     localStorage.removeItem('token');
     this.alertify.message('logged out');

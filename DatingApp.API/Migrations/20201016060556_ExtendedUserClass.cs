@@ -60,12 +60,6 @@ namespace DatingApp.API.Migrations
                 table: "Users",
                 nullable: true);
 
-            migrationBuilder.AddColumn<int>(
-                name: "MyProperty",
-                table: "Users",
-                nullable: false,
-                defaultValue: 0);
-
             migrationBuilder.CreateTable(
                 name: "Photos",
                 columns: table => new
@@ -140,9 +134,6 @@ namespace DatingApp.API.Migrations
                 name: "LookingFor",
                 table: "Users");
 
-            migrationBuilder.DropColumn(
-                name: "MyProperty",
-                table: "Users");
         }
     }
 }
